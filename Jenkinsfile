@@ -7,7 +7,7 @@ pipeline {
     stage('Get Nodes') {
       steps {
         sh '''
-            /usr/local/bin/kubectl get nodes   
+            /usr/local/bin/kubectl version  
         '''
       }
     }
