@@ -2,10 +2,11 @@ pipeline {
   agent any
   
   stages {
-    stage('Hello') {
+    stage('Get Nodes') {
       steps {
-        // This stage prints "Hello World!" to the console.
-        echo 'Hello World!'
+        sh '''
+            /usr/local/bin/kubectl get nodes   
+        '''
       }
     }
   }
