@@ -30,7 +30,8 @@ pipeline {
       steps {
         // This stage will deploy your application to the GKE cluster.
         // You can use kubectl commands or other tools to perform the deployment.
-        sh 'kubectl apply -f deployment.yaml'
+        // sh 'kubectl apply -f deployment.yaml'
+        sh 'echo kubernetes deployment'
       }
     }
   }
