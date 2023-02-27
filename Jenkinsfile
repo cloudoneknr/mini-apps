@@ -7,7 +7,7 @@ pipeline {
     stage('Get Nodes') {
       steps {
         sh '''
-            /usr/local/bin/kubectl version --output=yaml
+            /Users/nrkodari/Library/Application Support/cloud-code/installer/google-cloud-sdk/bin/kubectl version --output=yaml
         '''
       }
     }
