@@ -11,8 +11,8 @@ pipeline {
     stage('Connect to GKE') {
       steps {
         // Authenticate to Google Cloud using a service account key.
-        withCredentials([file(credentialsId: 'gcp-service-account-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
-          sh 'gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}'
+        withCredentials([file(credentialsId: 'gcp-service-account-key', variable: 'SA_KEY')]) {
+          sh 'gcloud auth activate-service-account --key-file=${SA_KEY}'
         }
         
         // Set the default Google Cloud project.
